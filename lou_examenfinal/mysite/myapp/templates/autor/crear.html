@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="text-white text-center">
+   <b> <h2>Agregar Autor</h2></b>
+</div>
+<br>
+<form method="post">
+   <div class="text-center"> 
+        {% csrf_token %}
+        {{ form.as_p }}
+   </div>
+   <br>
+   <div class="flex justify-center items-center gap-4">
+     <button type="submit" class="bg-purple-700 hover:bg-pink-500  w-1/5    transform hover:scale-105 transition duration-300 px-3 py-1 text-white ">Guardar</button>
+   </div>   
+   
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class="text-white text-center">
+    
+    <b><h2 class="text-lg">Editar Autor</h2></b>
+</div>
+<br>
+
+<form method="post"  class="text-center">
+    <b><p class="text-center">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </p></b>
+    <br>
+    <br>
+    <button type="submit" class="bg-purple-700 hover:bg-pink-500 w-1/5  transform hover:scale-105 transition duration-300 px-3 py-1 text-white">Guardar</button>
+</form>
+{% endblock %}
